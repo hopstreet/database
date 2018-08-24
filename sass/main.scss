@@ -1,0 +1,84 @@
+@font-face {
+ font-family: "Open Sans";
+ src: url("/fonts/OpenSans-Regular.ttf") format("ttf"),
+      url("/fonts/OpenSans-Bold.ttf") format("ttf"),
+      url("/fonts/OpenSans-Italic.ttf") format("ttf");
+}
+
+
+
+
+$main-dark: #212121;
+$white: #fff;
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+ max-width: 1600px;
+ width: 100%;
+ margin: 0 auto;
+}
+
+.header {
+  display:block;
+  background: $main-dark;
+  height: 80px;
+  width: 100%;
+}
+
+
+.header-logo {
+  &__supportix-logo {
+    width: 180px;
+    height: 80px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+  }
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    padding: 0px 14px;
+    color: $white;
+    font-weight: 700;
+  }
+
+  &__item:first-child:after {
+  content: '';
+      display: block;
+      height: 100%;
+      width: 2px;
+      background: $white;
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+  }
+  &__link {
+    text-decoration: none;
+    color: $white;
+  }
+
+  &__title {
+    font-family: "Open Sans";
+    text-transform: uppercase;
+    font-size: 14px;
+    color: $white;
+  }
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
